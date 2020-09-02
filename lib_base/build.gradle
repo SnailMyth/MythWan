@@ -64,4 +64,5 @@ dependencies {
 
     compileOnly rootProject.depsLibs.SmartRefreshLayout
     implementation rootProject.depsLibs.kotlinReflect
+
 }

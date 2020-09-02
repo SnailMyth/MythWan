@@ -1,6 +1,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion rootProject.android.compileSdkVersion
@@ -23,10 +24,14 @@ android {
         }
     }
 
-    compileOptions{
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+    kotlinOptions {
+        jvmTarget = "1.8"
     }
+
+    dataBinding {
+        enabled true
+    }
+
 
 }
 
@@ -36,7 +41,30 @@ dependencies {
     compileOnly rootProject.depsLibs.appcompat
     compileOnly rootProject.depsLibs.coreKtx
 
-    compileOnly rootProject.depsLibs.glide
+    implementation rootProject.depsLibs.lifecycleExt
+    compileOnly rootProject.depsLibs.paging
+    compileOnly rootProject.depsLibs.lifecycleViewmodelKtx
 
-    implementation project(":lib_base")
+    compileOnly rootProject.depsLibs.material
+    compileOnly rootProject.depsLibs.navigationFragment
+    compileOnly rootProject.depsLibs.navigationUi
+    compileOnly rootProject.depsLibs.navigationUiKtx
+    compileOnly rootProject.depsLibs.navigationFragmentKtx
+    compileOnly rootProject.depsLibs.constraintlayout
+
+    compileOnly rootProject.depsLibs.retrofit
+    compileOnly rootProject.depsLibs.SmartRefreshLayout
+    compileOnly rootProject.depsLibs.banner
+    compileOnly rootProject.depsLibs.glide
+    compileOnly rootProject.depsLibs.gson
+
+    implementation rootProject.depsLibs.koinScop
+    implementation rootProject.depsLibs.KoinViewModel
+    implementation rootProject.depsLibs.koinFragmet
+
+    compileOnly rootProject.depsLibs.viewPager2
+
+    compileOnly project(":lib_net")
+    compileOnly project(":lib_base")
+    compileOnly project(":lib_ui")
 }

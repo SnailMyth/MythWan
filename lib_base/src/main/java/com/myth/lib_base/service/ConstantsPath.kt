@@ -1,0 +1,35 @@
+package com.myth.lib_base.service
+
+/**
+ * @author : myth_hai
+ * @date : 2020/9/2 11:18
+ * @description : ConstantsPath
+ */
+object ConstantsPath {
+
+    /**
+     * 体系详情页
+     */
+    const val TREE_DETAIL_SERVICE_PATH = "/treeDetail/treeDetail_service"
+
+    /**
+     * webview
+     */
+    const val WEB_VIEW_SERVICE_PATH = "/webView/webView_service"
+
+    /**
+     * 登录页面
+     */
+    const val LOGIN_SERVICE_PATH = "/login/login_service"
+
+
+    /**
+     * 搜索
+     */
+    const val SEARCH_SERVICE_PATH = "/search/search_service"
+
+    /**
+     * 关于我们
+     */
+    const val ABOUT_US_SERVICE_PATH = "/aboutUs/aboutUs_service"
+}

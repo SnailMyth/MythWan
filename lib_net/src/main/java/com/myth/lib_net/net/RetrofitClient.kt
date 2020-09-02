@@ -34,8 +34,8 @@ class RetrofitClient private constructor() {
         return OkHttpClient.Builder()
             .addInterceptor(initLogInterceptor())
             .addInterceptor(CommonInterceptor())
-            .connectTimeout(10, TimeUnit.SECONDS)
-            .readTimeout(10, TimeUnit.SECONDS)
+            .connectTimeout(ApiService.CONNECT_TIMEOUT, TimeUnit.SECONDS)
+            .readTimeout(ApiService.READ_TIMEOUT, TimeUnit.SECONDS)
             .build()
     }
 
